@@ -96,7 +96,7 @@ const loginUser = async (req, res = response) => {
 
 
 
-
+//*Generamos el JWT
 const renewToken = async (req, res = response) => {
 
   const { uid, name } = req;
@@ -106,6 +106,8 @@ const renewToken = async (req, res = response) => {
 
   res.json({
     ok: true,
+    uid,
+    name,
     token
   });
 };
